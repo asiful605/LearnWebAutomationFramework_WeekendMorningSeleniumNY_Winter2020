@@ -37,6 +37,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class WebAPI {
+    // All the setup and Helper method will be here
 
     //ExtentReport
     public static ExtentReports extent;
@@ -108,9 +109,9 @@ public class WebAPI {
     @Parameters({"useCloudEnv", "cloudEnvName", "os", "os_version", "browserName", "browserVersion", "url"})
     @BeforeMethod
     public void setUp(@Optional("false") boolean useCloudEnv, @Optional("false") String cloudEnvName,
-                      @Optional("windows") String os, @Optional("10") String os_version, @Optional("chrome-options") String browserName, @Optional("34")
-                              String browserVersion, @Optional("https://www.cnn.com") String url) throws IOException {
-        //System.setProperty("webdriver.chrome.driver", "/Users/peoplentech/eclipse-workspace-March2018/SeleniumProject1/driver/chromedriver");
+                      @Optional("windows") String os, @Optional("10") String os_version, @Optional("chrome-options") String browserName, @Optional("81")
+                              String browserVersion, @Optional("https://www.google.com") String url) throws IOException {
+
         if (useCloudEnv == true) {
             if (cloudEnvName.equalsIgnoreCase("browserstack")) {
                 getCloudDriver(cloudEnvName, browserstack_username, browserstack_accesskey, os, os_version, browserName, browserVersion);
@@ -255,6 +256,25 @@ public class WebAPI {
     public void navigateBack() {
         driver.navigate().back();
     }
+    public void navigateTo(String url) {
+        driver.navigate().to(url);
+    }
+
+    public void navigateForward() {
+        driver.navigate().forward();
+    }
+    public void navigateRefresh() {
+        driver.navigate().refresh();
+    }
+
+    public String getCurrentUrl() {
+        String url = driver.getCurrentUrl();
+        return url;
+    }
+
+    public void getTitle() {
+        driver.getTitle();
+    }
 
     public static void captureScreenshot(WebDriver driver, String screenshotName) {
         DateFormat df = new SimpleDateFormat("(MM.dd.yyyy-HH:mma)");
@@ -374,10 +394,6 @@ public class WebAPI {
     public String getCurrentPageUrl() {
         String url = driver.getCurrentUrl();
         return url;
-    }
-
-    public void navigateForward() {
-        driver.navigate().forward();
     }
 
     public String getTextByCss(String locator) {
@@ -571,10 +587,9 @@ public class WebAPI {
         }
     }
 
+    //  By Using FindBY@ Web Elements for Page objects
     public void inputValueInTextBoxByWebElement(WebElement webElement, String value) {
-
         webElement.sendKeys(value + Keys.ENTER);
-
     }
 
     public void clearInputBox(WebElement webElement) {
