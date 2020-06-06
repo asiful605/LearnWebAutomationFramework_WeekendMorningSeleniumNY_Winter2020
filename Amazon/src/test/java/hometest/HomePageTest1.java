@@ -18,6 +18,7 @@ public class HomePageTest1 extends WebAPI {
     public void testSearchProduct() throws InterruptedException {
         getInitElements();
         homePage.searchProduct();
+        homePage.validateSearchProduct1();
     }
 
 

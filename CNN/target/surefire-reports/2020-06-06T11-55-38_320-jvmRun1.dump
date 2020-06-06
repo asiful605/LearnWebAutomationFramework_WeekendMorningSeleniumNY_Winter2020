@@ -1,4 +1,4 @@
-# Created at 2020-05-31T14:53:57.086
+# Created at 2020-06-06T11:56:58.439
 org.apache.maven.surefire.testset.TestSetFailedException: Suite file G:\SOFTWARE ENGINEERING\PROJECTS\IdeaProjects\PNT\LearnWebAutomationFramework_WeekendMorningSeleniumNY_Winter2020\CNN\target\test-classes\AmazonTestRunner.xml is not a valid file
 	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.locateTestSets(TestNGXmlTestSuite.java:99)
 	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)

@@ -11,6 +11,8 @@ public class HomePageWebElements {
         public static final String addToCartWebElement="add-to-cart-button";
         public static final String checkoutWebElement="hlb-ptc-btn-native";
         public static final String shopLinksWebElements="#nav-xshop > a";
+        public static final String iphone11ProWebElements="//*[@id=\"search\"]/span/div/span/h1/div/div[1]/div/div/span[3]";
+
 
 
 
