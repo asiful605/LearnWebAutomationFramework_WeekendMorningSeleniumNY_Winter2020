@@ -10,8 +10,8 @@ public class HomePageTest extends WebAPI {
     static HomePage homePage; // Reference Variable/ object of HomePage
 
 
-    public static void getInitElements(){
-        homePage= PageFactory.initElements(driver, HomePage.class);
+    public static void getInitElements() {
+        homePage = PageFactory.initElements(driver, HomePage.class);
     }
 
 
@@ -23,7 +23,6 @@ public class HomePageTest extends WebAPI {
         homePage.searchProduct();
         homePage.validateSearchProduct();
     }
-
 
 
 }

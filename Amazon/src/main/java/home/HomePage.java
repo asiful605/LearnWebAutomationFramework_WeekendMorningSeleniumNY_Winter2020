@@ -5,7 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.testng.Assert;
+import utility.DataDriven;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 import static webelements.HomePageWebElements.*;
@@ -100,5 +103,29 @@ public class HomePage extends WebAPI {
         Assert.assertEquals(actualResult, "\"iphone 11 pr\"", "I phone 11 Pro is not Displayed");
 
     }
+
+//
+//    public void searchItemsAndSubmitButton() throws Exception, IOException, SQLException, ClassNotFoundException {
+//        clickOnSearchButton();
+//        List<String> list = DataDriven.getItemsListFromDB();
+//        for (int i = 0; i < list.size(); i++) {
+//            searchFor(list.get(i));
+//            submitSearchButton();
+//            navigateBack();
+//            clearInput();
+//        }
+//    }
+//
+//    public void searchItems() throws Exception, IOException, SQLException, ClassNotFoundException {
+//        clickOnSearchButton();
+//        List<String> itemList = DataDriven.getItemValue();
+//        for (String st : itemList) {
+//            searchFor(st);
+//            submitSearchButton();
+//            navigateBack();
+//            clearInput();
+//            //validate items
+//        }
+//    }
 
 }
